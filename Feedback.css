@@ -1,0 +1,109 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FFE699;
+}
+nav{
+    background: #5C7AEA;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 15px 15px -10px black;
+}
+label.logo{
+    color: tomato;
+    /* -webkit-text-stroke: black; */
+    font-size: 40px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    font-family: 'Bungee Inline', cursive;
+    text-shadow: #161E54 1px 0 4px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    font-family: 'Staatliches', cursive;
+    font-size: 27px;
+    font-weight: 600;
+    padding: 3px; 
+    color: #193498;
+}
+nav ul li a:hover{
+    transition: 1s;
+    background-color: tomato;
+    color: whitesmoke;
+    padding: 7px 12px 7px 12px;
+    border-radius: 6px;
+}
+.contactbox{
+    width: 500px;
+    background-color: seashell;
+    box-shadow: 0 0 20px 0 #999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 6px;
+    position: absolute;
+}
+h1{
+    text-align: center;
+    padding-top: 15px;
+    color: seagreen;
+    font-family: 'Staatliches', cursive;
+}
+form{
+    margin: 35px;
+}
+.input-field
+{
+    width:400px;
+    height:40px;
+    margin-top: 20px;
+    padding-left: 10px;
+    border: none;
+    /* border: 1px solid #777; */
+    border-radius: 14px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    text-align: center;
+    align-items: center;
+    outline: none ;
+    font-family: 'Staatliches', cursive;
+    /* background-color: #FEF5ED; */
+}
+.textarea-field
+{
+    height:150px;
+    padding-top: 10px;
+    text-align: left;
+}
+.btn{
+    border-radius: 8px;
+    width: 70px;
+    background-color: yellowgreen;
+    color: white;
+    padding: 7px;
+    border: none;
+    transition: 1s;
+    position: relative;
+    left: 170px;
+}
+
+.btn:hover{
+    transition: 1s;
+    color: wheat;
+    background-color: seagreen;
+}

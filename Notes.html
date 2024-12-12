@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Notes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Staatliches&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="navi.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+<link rel="shortcut icon" type="image/png" href="icon.png">
+
+    <title>Notes</title>
+</head>
+<body>
+    <div class="bg">
+        <nav>
+            <label class="logo">Os | Nt</label>
+            <ul>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="Notes.html">Notes</a></li>
+                <li><a href="scheduler.html">Scheduler</a></li>
+                <li><a href="extras.html">Extras</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+        <!-- <hr size="3" noshade="" color="cyan" style="padding-top: -20px;"> -->
+        <div class="buttons">
+            <button id="MoM">Minutes of Meeting</button>
+            <br>
+            <button id="Dairy">Notes and Dairy</button>
+            <br>
+            <button id="dp">Email</button>
+        </div>
+        <div id="f1" class="meeting">
+            <form action="javascript:sendnotesmail()" method="post">
+                <div>
+                    <div class="meetinginfo">
+                        <h4>Meeting Information</h4>
+                        <hr>
+                        <label for="mid1">Objective : </label>
+                        <input type="text" id="mid1" style="border: none;">
+
+                        <label for="mid2" style="margin-left: 30px;">Date : </label>
+                        <input type="date" id="mid2" style="border: none; margin-left: 30px;">
+
+                        <br>
+
+                        <label for="mid3">Location : </label>
+                        <input type="text" id="mid3" style="border: none;">
+
+                        <label for="mid4" style="margin-left: 34px;">Time : </label>
+                        <input type="time" id="mid4" style="border: none; margin-left: 32px;">
+
+                        <br>
+
+                        <label for="mid5">Called by : </label>
+                        <input type="text" id="mid5" style="border: none;">
+
+                        <label for="mid6">Note taker : </label>
+                        <input type="text" id="mid6" style="border: none; width: 160px; margin-left: 30px;">
+
+                        <br>
+
+                        <label for="mid7">Attendees : </label>
+                        <input type="text" id="mid7" style="border: none; width: 150px;">
+
+                        <label for="mid8" style="margin-left: 30px;">Approved by : </label>
+                        <input type="text" id="mid8" style="border: none; width: 160px; margin-left: 30px;">
+                    </div>
+
+                    <h4>Agenda Items</h4>
+                    <hr>
+                    <textarea type="text" class="input-field textarea-field" id="mid9" placeholder="Agenda" style="border: none;"> </textarea>
+                
+                    <h4>Actions</h4>
+                    <hr>
+                    <textarea type="text" class="input-field textarea-field" id="mid10" placeholder="Actions" style="border: none;"> </textarea>
+                    <h4>Conclusion</h4>
+                    <hr>
+                    <textarea type="text" class="input-field textarea-field" id="mid11" placeholder="Conclusion" style="border: none;"> </textarea>
+                    <hr>
+                    <label for="mid12">To : </label>
+                    <input type="email" id="mid12" style="border: none; width: 300px;">
+                    <button id="sendbutton"onclick="sendmom()">Send</button>
+                </div>
+                <br>
+            </form>
+        </div>
+
+        <div id="f2">
+            <form action="javascript:sendnotesmail()" method="post">
+                <div>
+                    <div class="meetinginfo">
+                        <label for="roju">Date: </label>
+                        <input type="date" id="roju" style="border: none;">
+    
+                        <label for="title">Title: </label>
+                        <input type="text" id=title style="border: none;">
+    
+    
+                    </div>
+    
+                    <div class="parent">
+                        <div class="a">
+                            KeyWords
+                            <textarea name="" id="kw" cols="19" rows="40"></textarea>
+                        </div>
+                        <div class="container">
+                            <div>
+                                Main Notes
+                                <textarea name="" id="mn" cols="40" rows="30"></textarea>
+                            </div>
+                            <div>
+                                Summary
+                                <textarea name="" id="summ" cols="40" rows="10"></textarea>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+                <br>
+                <label for="mid12">To : </label>
+                <input type="email" id="mid12" style="border: none; width: 300px;">
+                <button type="button" onclick="sendnotesmail()" id="sendbutton">Send</button>
+            </form>
+        </div>
+        <div id="contactbox">
+            <!-- <h1>Feedback</h1> -->
+            <form action="javascript:sendmail()" method="post">
+                <input type="text" class="input-field" id="to" placeholder="To">
+                <hr id="firsthr">
+                <br>
+                <br>
+                <input type="text" class="input-field" id="sub" placeholder="Subject">
+                <hr>
+                <!-- <input type="text" class="input-field" placeholder="Subject"> -->
+                <textarea type="text" class="input-field textarea-field" id="Message" placeholder="Message">Message</textarea>
+                <button type="button" onclick="sendmail()" class="btn" >Send</button>
+            </form>
+        </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        
+        const targetDiv1 = document.getElementById("f1");
+        const btn1 = document.getElementById("MoM");
+        btn1.onclick = function () {
+        if (targetDiv1.style.display !== "none") {
+            targetDiv1.style.visibility = "visible";
+            targetDiv1.style.display = "none";
+            
+            // targetDiv2.style.visibility = "hidden";
+            // targetDiv3.style.visibility = "hidden";
+        } else {
+            targetDiv1.style.display = "block";
+        }
+        };
+
+        const targetDiv2 = document.getElementById("f2");
+        const btn2 = document.getElementById("Dairy");
+        btn2.onclick = function () {
+        if (targetDiv2.style.display !== "none") {
+            targetDiv2.style.visibility = "visible";
+            targetDiv2.style.display = "none";
+            
+        } else {
+            targetDiv2.style.display = "block";
+        }
+        };
+
+        const targetDiv3 = document.getElementById("contactbox");
+        const btn3 = document.getElementById("dp");
+        btn3.onclick = function () {
+        if (targetDiv3.style.display !== "none") {
+            targetDiv3.style.visibility = "visible";
+            targetDiv3.style.display = "none";
+            
+        } else {
+            targetDiv3.style.display = "block";
+        }
+        };
+    </script>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+   
+  <script>  
+  
+       function sendmail(){
+      
+            var name = $('#to').val();
+            //   var email = $('#Sender').val();
+            var subject = $('#sub').val();
+            var message = $('#Message').val();
+  
+              // var body = $('#body').val();
+  
+            var Body='Name: '+name+'<br>Subject: '+subject+'<br>Message: '+message;
+              //console.log(name, phone, email, message);
+  
+            Email.send({
+                  SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+                  To:name,
+                  From: "jm@gmail.com",
+                  Subject: "New message on contact from jm@gmail.com",
+                  Body: Body
+              }).then(
+                  message =>{
+                      //console.log (message);
+                      if(message=='OK'){
+                      alert('Mail has been sent!');
+                      }
+                      else{
+                          console.error (message);
+                          alert('An error has occured!')
+                      }
+                  }
+              );
+          }
+          
+        function sendnotesmail(){
+      
+      var date = $('#roju').val();
+      //   var email = $('#Sender').val();
+      var title = $('#title').val();
+      var keywordss = $('#kw').val();
+      var notes = $('#mn').val();
+      var sum = $('#summ').val();
+      var namee= $('#mid12').val();
+        // var body = $('#body').val();
+
+      var Body='Date: '+date+'<br>Title: '+title+'<br>Keywords: '+keywordss+'<br>Notes: '+notes+'<br>Summary: '+sum+'<br>Name: '+namee;
+        //console.log(name, phone, email, message);
+
+      Email.send({
+            SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+            To: namee,
+            From: "jm@gmail.com",
+            Subject: "A mail from jm@gmail.com",
+            Body: Body
+        }).then(
+            message =>{
+                //console.log (message);
+                if(message=='OK'){
+                alert('Mail has been sent!');
+                }
+                else{
+                    console.error (message);
+                    alert('An error has occurred')
+                    
+                }
+            }
+        );
+    }
+    function sendmom(){
+      
+      var obj = $('#mid1').val();
+      //   var email = $('#Sender').val();
+      var datee = $('#mid2').val();
+      var loc = $('#mid3').val();
+      var tim = $('#mid4').val();
+      var calledby = $('#mid5').val();
+      var notetaker = $('#mid6').val();
+      var attendies = $('#mid7').val();
+      var approvedby = $('#mid8').val();
+      var agendaitems = $('#mid9').val();
+      var actionss = $('#mid10').val();
+      var conclusionn = $('#mid11').val();
+      var name = $('#mid12').val();
+        // var body = $('#body').val();
+
+      var Body='Objective: '+obj+'<br>Date: '+datee+'<br>Loacation: '+loc+'<br>Time: '+tim+'<br>Called by: '+loc+'<br>Notetaker: '+notetaker+'<br>Attendies: '+attendies+'<br>Approved by: '+approvedby+'<br>Actions: '+actionss+'<br>Conclusion: '+conclusionn+'<br>Name: '+name;
+        //console.log(name, phone, email, message);
+
+      Email.send({
+            SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+            To:name,
+            From: "jm@gmail.com",
+            Subject: "New message on contact from jm@gmail.com",
+            Body: Body
+        }).then(
+            message =>{
+                //console.log (message);
+                if(message=='OK'){
+                alert('Mail has been sent!');
+                }
+                else{
+                    console.error (message);
+                    alert('An error has occured!')
+                }
+            }
+        );
+    }
+      </script>
+   </script>
+  
+</body>
+</html>
